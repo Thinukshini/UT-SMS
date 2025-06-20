@@ -8,5 +8,11 @@ namespace UnicomTICManagementSystem.Models
 {
     internal class Marks
     {
+        public string Student_Name {  get; set; }
+        public string Mark_id { get; set; }
+        public string Mark { get; set; }
+        public string Exam_type { get; set; }
+        public char Grade { get; set; }
+
     }
 }

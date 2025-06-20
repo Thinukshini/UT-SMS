@@ -112,7 +112,7 @@
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(863, 457);
+            ClientSize = new Size(803, 402);
             Controls.Add(selectbtn);
             Controls.Add(lectcombobox);
             Controls.Add(lecturerlbl);

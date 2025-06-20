@@ -16,14 +16,14 @@ namespace UnicomTICManagementSystem.Controllers
         {
 
            using (var conn = Database.GetConnection())
-            {
+           {
                var cmd = conn.CreateCommand();
                cmd.CommandText = "INSERT INTO Teachers (Name , Id , NIC_Number) VALUES (@name , @id ,@nic_number)";
                cmd.Parameters.AddWithValue("@name", teacher.Name);
                cmd.Parameters.AddWithValue("@id", teacher.Id);
                cmd.Parameters.AddWithValue("@nic_number", teacher.NIC_Number);
                cmd.ExecuteNonQuery();
-            }
+           }
 
 
         }
@@ -90,6 +90,7 @@ namespace UnicomTICManagementSystem.Controllers
         }
 
 
+       
 
 
 
