@@ -23,6 +23,7 @@ namespace UnicomTICManagementSystem.Views
         {
             comboBox1.Items.AddRange(new string[] { "Admin", "Staff", "Student", "Teacher" });
             comboBox1.SelectedIndex = 0;
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -44,16 +45,16 @@ namespace UnicomTICManagementSystem.Views
         {
             string username = UserName.Text.Trim();
             string password = Password.Text.Trim();
-            string userType = comboBox1.SelectedItem?.ToString();
+            //Safely handle null SelectedItem by providing a default empty string
+            string userType = comboBox1.SelectedItem?.ToString() ?? "";
 
-            
             Dictionary<string, (string user, string pass)> credentials = new Dictionary<string, (string, string)>()
-        {
-             { "Admin", ("Admin", "admin007") },
-             { "Staff", ("Staff", "staff007") },
-             { "Student",("Student", "student007") },
-             { "Teacher",("Teacher", "teacher007") }
-        };
+    {
+            { "Admin", ("Admin", "admin007") },
+            { "Staff", ("Staff", "staff007") },
+            { "Student", ("Student", "student007") },
+            { "Teacher", ("Teacher", "teacher007") }
+    };
 
             if (credentials.ContainsKey(userType))
             {
@@ -63,29 +64,24 @@ namespace UnicomTICManagementSystem.Views
                 {
                     MessageBox.Show($"{userType} Login Successfully.");
 
-                    
                     if (userType == "Admin")
                     {
                         Adminview adminview = new Adminview();
-                        adminview.SetAddButtonVisibility(true);
-                       
                         adminview.Show();
-                       // Adminview adminview = new Adminview();
-                       // adminview.Show();
                     }
                     else if (userType == "Staff")
                     {
-                        Staffform staffform = new Staffform();  
+                        Staffform staffform = new Staffform();
                         staffform.Show();
                     }
                     else if (userType == "Student")
                     {
-                        Studentform studentform = new Studentform();  
+                        Studentform studentform = new Studentform();
                         studentform.Show();
                     }
                     else if (userType == "Teacher")
                     {
-                        Teacherform teachers = new Teacherform();  
+                        Teacherform teachers = new Teacherform();
                         teachers.Show();
                     }
 
@@ -104,6 +100,7 @@ namespace UnicomTICManagementSystem.Views
                 MessageBox.Show("Please select a valid user type.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

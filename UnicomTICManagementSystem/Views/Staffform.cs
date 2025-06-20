@@ -10,7 +10,7 @@ namespace UnicomTICManagementSystem.Views
     public partial class Staffform : Form
     {
         private StaffController controller;
-        private string selectedStaffID = null;
+        private string? selectedStaffID = null;  // made nullable
 
         public Staffform()
         {
@@ -18,7 +18,6 @@ namespace UnicomTICManagementSystem.Views
             controller = new StaffController();
             LoadStaffs();
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
-           
         }
 
         private void LoadStaffs()
@@ -41,12 +40,12 @@ namespace UnicomTICManagementSystem.Views
             stanictxt.Text = "";
         }
 
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        // Updated event handler signature to allow nullable sender
+        private void dataGridView1_SelectionChanged(object? sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 var row = dataGridView1.SelectedRows[0];
-                
 
                 Staff selectedStaff = (Staff)row.DataBoundItem;
 
@@ -76,9 +75,6 @@ namespace UnicomTICManagementSystem.Views
             controller.AddStaff(staff);
             MessageBox.Show("Staff Added Successfully");
             LoadStaffs();
-
-            
-            
         }
 
         private void update2btn_Click(object sender, EventArgs e)
@@ -126,9 +122,7 @@ namespace UnicomTICManagementSystem.Views
 
         private void Staffform_Load(object sender, EventArgs e)
         {
-
-
-
+            // Optional: form load logic
         }
 
         private void course2btn_Click(object sender, EventArgs e)
@@ -140,7 +134,6 @@ namespace UnicomTICManagementSystem.Views
 
         private void timta2btn_Click(object sender, EventArgs e)
         {
-
             Timetableform timetableform = new Timetableform();
             timetableform.Show();
             this.Hide();
@@ -162,7 +155,7 @@ namespace UnicomTICManagementSystem.Views
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // Optional: cell content click logic
         }
     }
 }

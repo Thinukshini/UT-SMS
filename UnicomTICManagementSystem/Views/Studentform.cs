@@ -9,7 +9,7 @@ namespace UnicomTICManagementSystem.Views
     public partial class Studentform : Form
     {
         private StudentController controller;
-        private string selectedStudentID = null;
+        private string selectedStudentID = "";
 
         public Studentform()
         {
@@ -26,7 +26,7 @@ namespace UnicomTICManagementSystem.Views
             DataGridView1.DataSource = students;
             DataGridView1.ClearSelection();
             ClearInputs();
-            selectedStudentID = null;
+            selectedStudentID = "";
         }
 
         private void addbtn_Click(object sender, EventArgs e)

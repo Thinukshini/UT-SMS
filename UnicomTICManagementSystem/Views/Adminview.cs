@@ -7,23 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UnicomTICManagementSystem.Models;
 
 namespace UnicomTICManagementSystem.Views
 {
     public partial class Adminview : Form
     {
-        public Adminview()
+        
+
+        
+
+       
+        public Adminview( )
         {
             InitializeComponent();
+           
+
         }
 
-        public void SetAddButtonVisibility(bool visible)
-        {
-           //add2btn.Visible = visible;
-           // add2btn.Visible = visible;
-        }
+      
+        
+       
+           
+        
         private void Adminview_Load(object sender, EventArgs e)
         {
+           
 
         }
 
