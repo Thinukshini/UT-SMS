@@ -42,23 +42,23 @@ namespace UnicomTICManagementSystem.Views
 
                 case "C++":
                     subjectcombobox.Items.AddRange(new string[] { "Pointers", "Classes", "Templates", "STL", "Memory Management" });
-                    lectcombobox.Items.Add("Mr.Mayooran" );
+                    lectcombobox.Items.Add("Mr.Mayooran");
                     break;
 
                 case "Java":
                     subjectcombobox.Items.AddRange(new string[] { "JVM Basics", "Collections", "Streams", "Concurrency", "Spring Framework" });
-                    lectcombobox.Items.Add( "Dr.Neil Anthony-Pillai");
+                    lectcombobox.Items.Add("Dr.Neil Anthony-Pillai");
                     break;
 
 
                 case "HTML":
                     subjectcombobox.Items.AddRange(new string[] { "Elements", "Attributes", "Forms", "Tables", "SEO Basics" });
-                    lectcombobox.Items.Add( "Ms.S.Dharsika");
+                    lectcombobox.Items.Add("Ms.S.Dharsika");
                     break;
 
                 case "CSS":
                     subjectcombobox.Items.AddRange(new string[] { "Selectors", "Box Model", "Flexbox", "Grid", "Animations" });
-                    lectcombobox.Items.Add ("Mr.Mayooran");
+                    lectcombobox.Items.Add("Mr.Mayooran");
                     break;
 
                 case "Web Development":
@@ -86,24 +86,29 @@ namespace UnicomTICManagementSystem.Views
 
         private void selectbtn_Click(object sender, EventArgs e)
         {
-            
-            
-           if (coursecombobox.SelectedItem == null ||
-               subjectcombobox.SelectedItem == null ||
-               lectcombobox.SelectedItem == null)
-           {
-               MessageBox.Show("Please make sure all selections are made (Course, Subject, Lecturer).", "Selection Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-               return;
-           }
 
-           string selectedCourse = coursecombobox.SelectedItem.ToString();
-           string selectedSubject = subjectcombobox.SelectedItem.ToString();
-           string selectedLecturer = lectcombobox.SelectedItem.ToString();
 
-           string message = $"Course: {selectedCourse}\nSubject: {selectedSubject}\nLecturer: {selectedLecturer}";
+            if (coursecombobox.SelectedItem == null ||
+                subjectcombobox.SelectedItem == null ||
+                lectcombobox.SelectedItem == null)
+            {
+                MessageBox.Show("Please make sure all selections are made (Course, Subject, Lecturer).", "Selection Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-           MessageBox.Show(message, "Selection Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+            string selectedCourse = coursecombobox.SelectedItem.ToString();
+            string selectedSubject = subjectcombobox.SelectedItem.ToString();
+            string selectedLecturer = lectcombobox.SelectedItem.ToString();
+
+            string message = $"Course: {selectedCourse}\nSubject: {selectedSubject}\nLecturer: {selectedLecturer}";
+
+            MessageBox.Show(message, "Selection Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
 
         }
     }

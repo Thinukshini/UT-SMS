@@ -43,6 +43,7 @@ namespace UnicomTICManagementSystem.Views
             coursebtn = new Button();
             marksbtn = new Button();
             exambtn = new Button();
+            backbtn = new Button();
             ((System.ComponentModel.ISupportInitialize)DataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -188,12 +189,24 @@ namespace UnicomTICManagementSystem.Views
             exambtn.UseVisualStyleBackColor = true;
             exambtn.Click += exambtn_Click;
             // 
+            // backbtn
+            // 
+            backbtn.Location = new Point(725, 452);
+            backbtn.Margin = new Padding(4);
+            backbtn.Name = "backbtn";
+            backbtn.Size = new Size(87, 30);
+            backbtn.TabIndex = 14;
+            backbtn.Text = "Back";
+            backbtn.UseVisualStyleBackColor = true;
+            backbtn.Click += backbtn_Click;
+            // 
             // Studentform
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GrayText;
             ClientSize = new Size(825, 495);
+            Controls.Add(backbtn);
             Controls.Add(exambtn);
             Controls.Add(marksbtn);
             Controls.Add(coursebtn);
@@ -260,5 +273,6 @@ namespace UnicomTICManagementSystem.Views
         private Button coursebtn;
         private Button marksbtn;
         private Button exambtn;
+        private Button backbtn;
     }
 }

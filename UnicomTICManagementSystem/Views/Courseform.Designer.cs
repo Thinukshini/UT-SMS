@@ -35,6 +35,7 @@
             lecturerlbl = new Label();
             lectcombobox = new ComboBox();
             selectbtn = new Button();
+            backbtn = new Button();
             SuspendLayout();
             // 
             // courselbl
@@ -107,12 +108,23 @@
             selectbtn.UseVisualStyleBackColor = true;
             selectbtn.Click += selectbtn_Click;
             // 
+            // backbtn
+            // 
+            backbtn.Location = new Point(684, 356);
+            backbtn.Name = "backbtn";
+            backbtn.Size = new Size(77, 30);
+            backbtn.TabIndex = 7;
+            backbtn.Text = "Back";
+            backbtn.UseVisualStyleBackColor = true;
+            backbtn.Click += backbtn_Click;
+            // 
             // Courseform
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(803, 402);
+            Controls.Add(backbtn);
             Controls.Add(selectbtn);
             Controls.Add(lectcombobox);
             Controls.Add(lecturerlbl);
@@ -138,5 +150,6 @@
         private Label lecturerlbl;
         private ComboBox lectcombobox;
         private Button selectbtn;
+        private Button backbtn;
     }
 }

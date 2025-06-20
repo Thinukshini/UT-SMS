@@ -35,6 +35,7 @@
             adtimetablebtn = new Button();
             adexamsbtn = new Button();
             admarksbtn = new Button();
+            backbtn = new Button();
             SuspendLayout();
             // 
             // studentbtn
@@ -110,12 +111,22 @@
             admarksbtn.UseVisualStyleBackColor = true;
             admarksbtn.Click += admarksbtn_Click;
             // 
+            // backbtn
+            // 
+            backbtn.Location = new Point(595, 318);
+            backbtn.Name = "backbtn";
+            backbtn.Size = new Size(75, 23);
+            backbtn.TabIndex = 7;
+            backbtn.Text = "Back";
+            backbtn.UseVisualStyleBackColor = true;
+            // 
             // Adminview
             // 
             AutoScaleDimensions = new SizeF(11F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(682, 353);
+            Controls.Add(backbtn);
             Controls.Add(admarksbtn);
             Controls.Add(adexamsbtn);
             Controls.Add(adtimetablebtn);
@@ -140,5 +151,6 @@
         private Button adtimetablebtn;
         private Button adexamsbtn;
         private Button admarksbtn;
+        private Button backbtn;
     }
 }

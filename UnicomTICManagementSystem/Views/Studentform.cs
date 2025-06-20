@@ -108,18 +108,18 @@ namespace UnicomTICManagementSystem.Views
                 var row = DataGridView1.SelectedRows[0];
                 Student selectedStudent = (Student)row.DataBoundItem;
 
-              //  if (student != null)
-                
-                   //if (int.TryParse(student.Id, out int id))
-                    
-                       // selectedStudentID = student.id;
-                 stIDtxt.Text = selectedStudent.Id.ToString();
-                 stnametxt.Text = selectedStudent.Name;
-                 nicNumtxt.Text = selectedStudent.NIC_Number;
+                //  if (student != null)
 
-                 selectedStudentID = selectedStudent.Id;
-                    
-                
+                //if (int.TryParse(student.Id, out int id))
+
+                // selectedStudentID = student.id;
+                stIDtxt.Text = selectedStudent.Id.ToString();
+                stnametxt.Text = selectedStudent.Name;
+                nicNumtxt.Text = selectedStudent.NIC_Number;
+
+                selectedStudentID = selectedStudent.Id;
+
+
             }
             else
             {
@@ -154,6 +154,11 @@ namespace UnicomTICManagementSystem.Views
             Examform examform = new Examform();
             examform.Show();
             this.Hide();
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

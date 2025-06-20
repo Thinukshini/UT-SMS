@@ -40,6 +40,7 @@
             maraddbtn = new Button();
             marupdatebtn = new Button();
             madeletebtn = new Button();
+            backbtn = new Button();
             ((System.ComponentModel.ISupportInitialize)markgridview).BeginInit();
             SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             // mastnametxt
             // 
             mastnametxt.Location = new Point(229, 6);
-            mastnametxt.Margin = new Padding(4, 4, 4, 4);
+            mastnametxt.Margin = new Padding(4);
             mastnametxt.Name = "mastnametxt";
             mastnametxt.Size = new Size(284, 29);
             mastnametxt.TabIndex = 1;
@@ -74,7 +75,7 @@
             // extytxxt
             // 
             extytxxt.Location = new Point(229, 50);
-            extytxxt.Margin = new Padding(4, 4, 4, 4);
+            extytxxt.Margin = new Padding(4);
             extytxxt.Name = "extytxxt";
             extytxxt.Size = new Size(284, 29);
             extytxxt.TabIndex = 3;
@@ -92,7 +93,7 @@
             // marktxt
             // 
             marktxt.Location = new Point(229, 94);
-            marktxt.Margin = new Padding(4, 4, 4, 4);
+            marktxt.Margin = new Padding(4);
             marktxt.Name = "marktxt";
             marktxt.Size = new Size(284, 29);
             marktxt.TabIndex = 5;
@@ -110,7 +111,7 @@
             // gradetxt
             // 
             gradetxt.Location = new Point(229, 143);
-            gradetxt.Margin = new Padding(4, 4, 4, 4);
+            gradetxt.Margin = new Padding(4);
             gradetxt.Name = "gradetxt";
             gradetxt.Size = new Size(284, 29);
             gradetxt.TabIndex = 7;
@@ -119,7 +120,7 @@
             // 
             markgridview.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             markgridview.Location = new Point(30, 194);
-            markgridview.Margin = new Padding(4, 4, 4, 4);
+            markgridview.Margin = new Padding(4);
             markgridview.Name = "markgridview";
             markgridview.Size = new Size(646, 255);
             markgridview.TabIndex = 8;
@@ -127,7 +128,7 @@
             // maraddbtn
             // 
             maraddbtn.Location = new Point(60, 467);
-            maraddbtn.Margin = new Padding(4, 4, 4, 4);
+            maraddbtn.Margin = new Padding(4);
             maraddbtn.Name = "maraddbtn";
             maraddbtn.Size = new Size(126, 46);
             maraddbtn.TabIndex = 9;
@@ -137,7 +138,7 @@
             // marupdatebtn
             // 
             marupdatebtn.Location = new Point(285, 467);
-            marupdatebtn.Margin = new Padding(4, 4, 4, 4);
+            marupdatebtn.Margin = new Padding(4);
             marupdatebtn.Name = "marupdatebtn";
             marupdatebtn.Size = new Size(119, 46);
             marupdatebtn.TabIndex = 10;
@@ -147,12 +148,23 @@
             // madeletebtn
             // 
             madeletebtn.Location = new Point(493, 468);
-            madeletebtn.Margin = new Padding(4, 4, 4, 4);
+            madeletebtn.Margin = new Padding(4);
             madeletebtn.Name = "madeletebtn";
             madeletebtn.Size = new Size(119, 45);
             madeletebtn.TabIndex = 11;
             madeletebtn.Text = "Delete";
             madeletebtn.UseVisualStyleBackColor = true;
+            // 
+            // backbtn
+            // 
+            backbtn.Location = new Point(685, 501);
+            backbtn.Margin = new Padding(4);
+            backbtn.Name = "backbtn";
+            backbtn.Size = new Size(72, 29);
+            backbtn.TabIndex = 12;
+            backbtn.Text = "Back";
+            backbtn.UseVisualStyleBackColor = true;
+            backbtn.Click += backbtn_Click;
             // 
             // Markform
             // 
@@ -160,6 +172,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GrayText;
             ClientSize = new Size(770, 534);
+            Controls.Add(backbtn);
             Controls.Add(madeletebtn);
             Controls.Add(marupdatebtn);
             Controls.Add(maraddbtn);
@@ -174,9 +187,10 @@
             Controls.Add(mastnamelbl);
             Font = new Font("Segoe UI Black", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.ControlText;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Markform";
             Text = "Markform";
+            Load += Markform_Load;
             ((System.ComponentModel.ISupportInitialize)markgridview).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -196,5 +210,6 @@
         private Button maraddbtn;
         private Button marupdatebtn;
         private Button madeletebtn;
+        private Button backbtn;
     }
 }

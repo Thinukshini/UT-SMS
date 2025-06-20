@@ -42,6 +42,7 @@
             timta2btn = new Button();
             exam2btn = new Button();
             mark2btn = new Button();
+            backbtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -178,12 +179,23 @@
             mark2btn.UseVisualStyleBackColor = true;
             mark2btn.Click += mark2btn_Click;
             // 
+            // backbtn
+            // 
+            backbtn.Location = new Point(802, 440);
+            backbtn.Name = "backbtn";
+            backbtn.Size = new Size(75, 30);
+            backbtn.TabIndex = 14;
+            backbtn.Text = "Back";
+            backbtn.UseVisualStyleBackColor = true;
+            backbtn.Click += backbtn_Click;
+            // 
             // Staffform
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GrayText;
             ClientSize = new Size(889, 482);
+            Controls.Add(backbtn);
             Controls.Add(mark2btn);
             Controls.Add(exam2btn);
             Controls.Add(timta2btn);
@@ -224,5 +236,6 @@
         private Button timta2btn;
         private Button exam2btn;
         private Button mark2btn;
+        private Button backbtn;
     }
 }

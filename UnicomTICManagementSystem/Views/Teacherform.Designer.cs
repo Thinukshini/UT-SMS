@@ -42,6 +42,7 @@
             tetimebtn = new Button();
             teexambtn = new Button();
             temarkbtn = new Button();
+            backbtn = new Button();
             ((System.ComponentModel.ISupportInitialize)tedataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -185,12 +186,23 @@
             temarkbtn.UseVisualStyleBackColor = true;
             temarkbtn.Click += temarkbtn_Click;
             // 
+            // backbtn
+            // 
+            backbtn.Location = new Point(759, 423);
+            backbtn.Margin = new Padding(4);
+            backbtn.Name = "backbtn";
+            backbtn.Size = new Size(73, 28);
+            backbtn.TabIndex = 14;
+            backbtn.Text = "Back";
+            backbtn.UseVisualStyleBackColor = true;
+            // 
             // Teacherform
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(845, 464);
+            Controls.Add(backbtn);
             Controls.Add(temarkbtn);
             Controls.Add(teexambtn);
             Controls.Add(tetimebtn);
@@ -231,5 +243,6 @@
         private Button tetimebtn;
         private Button teexambtn;
         private Button temarkbtn;
+        private Button backbtn;
     }
 }

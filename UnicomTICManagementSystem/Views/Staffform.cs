@@ -157,5 +157,10 @@ namespace UnicomTICManagementSystem.Views
         {
             // Optional: cell content click logic
         }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
