@@ -72,6 +72,7 @@ namespace UnicomTICManagementSystem.Repositories
             CREATE TABLE IF NOT EXISTS Marks (
                 mark_id INTEGER PRIMARY KEY AUTOINCREMENT,
                 student_id TEXT,
+                Student_Name TEXT,
                 exam_id INTEGER,
                 marks_obtained INTEGER,
                 FOREIGN KEY(student_id) REFERENCES Students(Id),

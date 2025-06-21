@@ -16,8 +16,8 @@ namespace UnicomTICManagementSystem.Controllers
             using (var conn = Database.GetConnection())
             {
                 var cmd = conn.CreateCommand();
-                cmd.CommandText = "INSERT INTO Teachers (Student_Name ,Marks, Exam_type ,Grade) VALUES (@student_name ,@marks, @exam_type ,@grade)";
-                cmd.Parameters.AddWithValue("@studemt_name", marks.Student_Name);
+                cmd.CommandText = "INSERT INTO Marks (Student_Name ,Marks, Exam_type ,Grade) VALUES (@student_name ,@marks, @exam_type ,@grade)";
+                cmd.Parameters.AddWithValue("@student_name", marks.Student_Name);
                 cmd.Parameters.AddWithValue("@marks", marks.Mark);
                 cmd.Parameters.AddWithValue("@exam_type", marks.Exam_type);
                 cmd.Parameters.AddWithValue("@grade", marks.Grade);

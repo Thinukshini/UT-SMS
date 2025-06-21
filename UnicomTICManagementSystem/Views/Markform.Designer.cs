@@ -50,9 +50,9 @@
             mastnamelbl.Location = new Point(30, 9);
             mastnamelbl.Margin = new Padding(4, 0, 4, 0);
             mastnamelbl.Name = "mastnamelbl";
-            mastnamelbl.Size = new Size(119, 21);
+            mastnamelbl.Size = new Size(126, 21);
             mastnamelbl.TabIndex = 0;
-            mastnamelbl.Text = "Sudent_Name";
+            mastnamelbl.Text = "Student_Name";
             // 
             // mastnametxt
             // 
@@ -124,6 +124,7 @@
             markgridview.Name = "markgridview";
             markgridview.Size = new Size(646, 255);
             markgridview.TabIndex = 8;
+            markgridview.CellContentClick += markgridview_CellContentClick;
             // 
             // maraddbtn
             // 
@@ -134,6 +135,7 @@
             maraddbtn.TabIndex = 9;
             maraddbtn.Text = "Add";
             maraddbtn.UseVisualStyleBackColor = true;
+            maraddbtn.Click += maraddbtn_Click;
             // 
             // marupdatebtn
             // 
@@ -144,16 +146,18 @@
             marupdatebtn.TabIndex = 10;
             marupdatebtn.Text = "Update";
             marupdatebtn.UseVisualStyleBackColor = true;
+            marupdatebtn.Click += marupdatebtn_Click;
             // 
             // madeletebtn
             // 
-            madeletebtn.Location = new Point(493, 468);
+            madeletebtn.Location = new Point(494, 468);
             madeletebtn.Margin = new Padding(4);
             madeletebtn.Name = "madeletebtn";
             madeletebtn.Size = new Size(119, 45);
             madeletebtn.TabIndex = 11;
             madeletebtn.Text = "Delete";
             madeletebtn.UseVisualStyleBackColor = true;
+            madeletebtn.Click += madeletebtn_Click;
             // 
             // backbtn
             // 

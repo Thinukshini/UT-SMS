@@ -35,12 +35,13 @@
             Password = new TextBox();
             Login = new Button();
             comboBox1 = new ComboBox();
+            label3 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(169, 38);
+            label1.Location = new Point(176, 109);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(90, 21);
@@ -51,7 +52,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(167, 127);
+            label2.Location = new Point(176, 184);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(88, 21);
@@ -62,7 +63,7 @@
             // rolelbl
             // 
             rolelbl.AutoSize = true;
-            rolelbl.Location = new Point(186, 212);
+            rolelbl.Location = new Point(196, 256);
             rolelbl.Margin = new Padding(4, 0, 4, 0);
             rolelbl.Name = "rolelbl";
             rolelbl.Size = new Size(45, 21);
@@ -72,7 +73,7 @@
             // 
             // UserName
             // 
-            UserName.Location = new Point(413, 38);
+            UserName.Location = new Point(413, 101);
             UserName.Margin = new Padding(4);
             UserName.Name = "UserName";
             UserName.Size = new Size(315, 29);
@@ -80,7 +81,7 @@
             // 
             // Password
             // 
-            Password.Location = new Point(413, 124);
+            Password.Location = new Point(413, 176);
             Password.Margin = new Padding(4);
             Password.Name = "Password";
             Password.Size = new Size(315, 29);
@@ -88,7 +89,7 @@
             // 
             // Login
             // 
-            Login.Location = new Point(632, 315);
+            Login.Location = new Point(653, 316);
             Login.Name = "Login";
             Login.Size = new Size(75, 37);
             Login.TabIndex = 6;
@@ -99,11 +100,20 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(413, 209);
+            comboBox1.Location = new Point(413, 248);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(315, 29);
             comboBox1.TabIndex = 7;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(212, 34);
+            label3.Name = "label3";
+            label3.Size = new Size(331, 21);
+            label3.TabIndex = 8;
+            label3.Text = "Welcome To Unicom Mangement System";
             // 
             // Loginform
             // 
@@ -111,6 +121,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(772, 389);
+            Controls.Add(label3);
             Controls.Add(comboBox1);
             Controls.Add(Login);
             Controls.Add(Password);
@@ -137,5 +148,6 @@
         private TextBox Password;
         private Button Login;
         private ComboBox comboBox1;
+        private Label label3;
     }
 }
