@@ -65,6 +65,8 @@ namespace UnicomTICManagementSystem.Repositories
                 subject_id INTEGER,
                 exam_date TEXT,
                 room_id INTEGER,
+                Subject TEXT NOT NULL,
+                Exam_Type TEXT NOT NULL,
                 FOREIGN KEY(subject_id) REFERENCES Subjects(subject_id),
                 FOREIGN KEY(room_id) REFERENCES Rooms(room_id)
             );
@@ -72,7 +74,10 @@ namespace UnicomTICManagementSystem.Repositories
             CREATE TABLE IF NOT EXISTS Marks (
                 mark_id INTEGER PRIMARY KEY AUTOINCREMENT,
                 student_id TEXT,
-                Student_Name TEXT,
+                Student_Name TEXT NOT NULL,
+                Grade TEXT NOT NULL,
+                Marks TEXT NOT NULL,
+                Exam_Type TEXT NOT NULL,
                 exam_id INTEGER,
                 marks_obtained INTEGER,
                 FOREIGN KEY(student_id) REFERENCES Students(Id),

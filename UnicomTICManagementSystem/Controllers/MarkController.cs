@@ -47,7 +47,7 @@ namespace UnicomTICManagementSystem.Controllers
                                 Student_Name = reader.GetString(0),
                                 Exam_type = reader.GetString(1),
                                 Mark = reader.GetString(2),
-                                Grade = reader.GetChar(3),
+                                Grade = reader.GetString(3),
                             });
                         }
                     }
